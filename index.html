@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<body>
+    <h1 style="text-align: center;">My Portfolio</h1>
+    <div class="container">
+        <div class="profile">
+            <img src="WhatsApp Image 2024-07-24 at 8.10.42 PM.jpeg" alt="Nishitha Peddi" class="profile-img">
+            <h3>Nishitha Peddi</h3>
+            <div class="intro">Hello Alieans<br>I'm Frontend developer</div>
+            <div class="buttons">
+                <button class="open-popup" data-popup="home-popup">Home</button>
+                <button class="open-popup" data-popup="skills-popup">Skills</button>
+                <button class="open-popup" data-popup="projects-popup">Projects</button>
+                <button class="open-popup" data-popup="contact-popup">Contact</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popover Cards -->
+    <div id="home-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2><b><i><u>Home</u></i></b></h2>
+            <p style="color:rgb(165, 235, 238)">Welcome to the Home section!</p>
+            <p class="para">Hello! I'm <b class="name">Nishitha Peddi</b> currently in my 4th year of pursuing a B.Tech degree at RGMCET.
+             My academic journey began at Viswa Jyothi E.M School in Jammalamadugu, where I laid the 
+             foundation for my passion for technology and innovation.
+
+            In addition to my technical studies, I have developed strong leadership and communication
+             skills, which have been instrumental in my academic and extracurricular activities. 
+             I enjoy taking initiative and working collaboratively with others to achieve common goals.
+            
+            Outside of academics, I find joy in gardening and surfing the internet, where I often 
+            explore new ideas, learn new skills, and stay updated with the latest trends. My hobbies
+             reflect my curiosity and love for growth—whether it's nurturing plants or discovering new
+              information online.
+            </p>
+        </div>
+    </div>
+
+    <div id="skills-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2><b><i><u>Skills</u></i></b></h2>
+            <p>Here are my skills</p>
+            <p class="tech">Technical Skills:</p>
+            <ol class="skills">
+                <li>HTML</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>C</li>
+                <li>Java</li>
+            </ol>
+            <p class="tools">Tools</p>
+            <ol class="tool">
+                <li>VScode</li>
+                <li>Matlab</li>
+                <li>Git</li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="projects-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2><b><i><u>Projects</u></i></b></h2>
+            <p>These are my projects</p>
+            <ol class="proj">
+                <li>Basic Portfolio Website using HTML and CSS</li>
+                <li>Resume using HTML and CSS</li><hr><br>
+                <div class="photos">
+                    <span class="first"><img src="portscreen.png"
+                                            height="300px"
+                                            width="250px"></span>
+                    
+                    
+                </div>
+            </ol>
+           
+        </div>
+    </div>
+
+    <div id="contact-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2><b><i><u>Contact me</u></i></b></h2>
+            <p>Contact me at:</p>
+            <ul class="contact">
+                <li><b><u>Gmail:</u></b><i>nishithapeddi@gmail.com</i></li>
+                <li><b><u>Mob no:</u></b><i>9392598172</i></li>
+                <li><b><u>Linked in:</u></b><i>linkedin.com/in/nishitha-peddi</i></li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.open-popup').forEach(button => {
+            button.addEventListener('click', () => {
+                const popupId = button.getAttribute('data-popup');
+                document.getElementById(popupId).style.display = 'flex';
+            });
+        });
+
+        document.querySelectorAll('.close-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                button.closest('.popup').style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
